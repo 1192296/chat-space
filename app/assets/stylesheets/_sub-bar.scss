@@ -1,0 +1,22 @@
+.sub-bar {
+  font-weight: bold; 
+  color: #FFFFFF;
+  font-size: 16px;
+  background: #253141;
+  width: 300px;
+  height: 94px;
+  display: flex;
+  justify-content: space-between;
+  float: left;
+  border-bottom: solid #253141 thin;
+
+    &--iconBox {
+      padding-right: 20px;
+      padding-top: 35px;
+    }
+
+  &__name {
+    padding-left: 20px;
+    padding-top: 35px;
+  }
+}
