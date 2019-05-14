@@ -1,0 +1,45 @@
+    .header
+      グループを作成しました
+    .sub-bar
+      .sub-bar__name
+        渡邉恭章
+      .sub-bar--iconBox
+        %i.fa.fa-edit
+        %i.fa.fa-gear
+    .main-bar
+      .main-bar__group
+        グループ名
+        .main-bar__groupName
+          Member: 渡邉恭章
+      .main-bar__edit
+        EDIT
+
+    .content
+      .content__left
+        .content__left__groupFirst グループ名
+        .content__left__groupText メッセージ
+        %br  
+        %br  
+        .content__left__groupSecond グループ名 
+        .content__left__groupText メッセージ
+
+        %br  
+        %br  
+        .content__left__groupSecond グループ名
+        .content__left__groupText メッセージ
+
+      .content__main
+        .content__main__tweetName
+          渡邉恭章
+          .content__main__tweetName-textBun
+            haml
+        .content__main-timeStamp
+          yyyy/mm/dd/%a: 
+        .content__main__footer
+          %input{:name => "text", :size => "16", :placeholder => "type a message"}
+          %label{for: "file_photo"}
+            %i.fa.fa-image
+              %input{:type => "file", :id => "file_photo", :style => "display:none;"} 
+          .content__main__footer-send_buttom
+            SEND
+        

@@ -1,0 +1,10 @@
+.content {
+  width: 100%;
+
+  &__left {
+    width: 300px;
+    float: left;
+    height: calc(100vw - 94px);
+    background: #2f3e51;
+  }
+}
