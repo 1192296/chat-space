@@ -33,13 +33,10 @@ Things you may want to cover:
 
 ### Association
 - has_many :groups ,through: :group_users
-- has_many :group_users
 
   has_many :comments
-
 ## group_usersテーブル(中間テーブル)
 
-|Column|Type|Options|
 |------|----|-------|
 |group_id|integer|null: false, index: true, unique: false, foreign_key: true|
 |user_id|integer|null: false, index: false, unique: false, foreign_key: true|
@@ -61,7 +58,7 @@ Things you may want to cover:
 
 - has_many :comments
 
-## commentsテーブル
+## comentsテーブル
 
 |Column|Type|Options|
 |------|----|-------|
