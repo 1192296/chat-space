@@ -58,14 +58,14 @@ Things you may want to cover:
 
 - has_many :comments
 
-## comentsテーブル
+## commentsテーブル
 
 |Column|Type|Options|
 |------|----|-------|
 |user_id|integer|null: false, index: true, unique: false, foreign_key: true|
 |group_id|integer|null: false, index: true, unique: false, foreign_key: true|
 |comment|text|null: true, index: false, unique: false, foreign_key: false|
-|image|text|null: true, index: false, unique: false, foreign_key: false|
+|image|string|null: true, index: false, unique: false, foreign_key: false|
 
 ### Association
 - belongs_to :user
