@@ -1,9 +1,9 @@
-class CreateComments < ActiveRecord::Migration[5.0]
+class CreateMessages < ActiveRecord::Migration[5.0]
   def change
-    create_table :comments do |t|
+    create_table :messages do |t|
       t.integer :user_id
       t.integer :group_id
-      t.text :comment
+      t.text :message
       t.string :image
 
       t.timestamps
