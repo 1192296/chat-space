@@ -1,7 +1,7 @@
-$prefixes: -webkit-, -moz-, -ms-, -o-, '';
+// $prefixes: -webkit-, -moz-, -ms-, -o-, '';
 
-@mixin flexbox {
-  @each $prefix in $prefixes {
-    display: #{$prefix}flex;
-  }
-}
+// @mixin flexbox {
+//   @each $prefix in $prefixes {
+//     display: #{$prefix}flex;
+//   }
+// }

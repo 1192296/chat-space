@@ -1,4 +1,5 @@
 .chat {
+  float: right;
   width: calc(100% - 300px);
   .header {
     box-sizing: border-box;
@@ -23,8 +24,8 @@
       }
     }
     .right-header {
-      border: 1px solid $light_blue;
-      color: $light_blue;
+      border: 1px solid #38AEF0;
+      color: #38AEF0;
       float: right;
       height: 40px;
       line-height: 40px;
@@ -37,7 +38,7 @@
     background-color: #FAFAFA;
     box-sizing: border-box;
     padding: 46px 40px 0;
-    height: calc(100% - 100px - 90px);
+    height: calc(100vh - 100px - 90px);
     .message {
       .upper-message {
         display: flex;
@@ -68,6 +69,9 @@
     box-sizing: border-box;
     height: 90px;
     padding: 20px 50px 20px 40px;
+    bottom: 0;
+    position: fixed;
+    width: calc(100% - 300px);
     &__message {
       border: none;
       float: left;
@@ -75,7 +79,7 @@
       width: calc(100% - 150px);
     }
     &__mask {
-      background-color: $white;
+      background-color: white;
       float: left;
       height: 50px;
       padding-right: 10px;
@@ -88,9 +92,9 @@
       }
     }
     &__submit {
-      background-color: $light_blue;
+      background-color: #38AEF0;
       border: none;
-      color: $white;
+      color: white;
       float: right;
       font-size: 16px;
       height: 50px;
