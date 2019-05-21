@@ -1,34 +1,8 @@
 .notification
   .notice
     グループを作成しました
-  = render "devise/shared/side_bar"
-  -# .side-bar
-  -#   .header
-  -#     %h3.header__name
-  -#       渡邉恭章
-  -#     %ul.header__lists
-  -#       %li.list
-  -#         = link_to do
-  -#           = fa_icon 'pencil-square-o', class: 'icon'
-  -#       %li.list
-  -#         = link_to do
-  -#           = fa_icon 'cog', class: 'icon'
-  -#   .groups
-  -#     .group
-  -#       .group__name
-  -#         グループ名
-  -#       .group__message
-  -#         新着メッセージ
-  -#     .group
-  -#       .group__name
-  -#         グループ名
-  -#       .group__message
-  -#         新着メッセージ
-  -#     .group
-  -#       .group__name
-  -#         グループ名
-  -#       .group__message
-  -#         新着メッセージ
+  = render "shared/side_bar"
+  
   .chat
     .header
       .left-header
@@ -45,34 +19,37 @@
       .right-header
         .right-header__button
           Edit
-    .messages
-      .message
-        .upper-message
-          .upper-message__user-name
-            メンバー
-          .upper-message__date
-            2019/05/19
-        .lower-meesage
-          .lower-message__content
-            メッセージ
-      .message
-        .upper-message
-          .upper-message__user-name
-            メンバー
-          .upper-message__date
-            2019/05/19
-        .lower-meesage
-          .lower-message__content
-            メッセージ
-      .message
-        .upper-message
-          .upper-message__user-name
-            メンバー
-          .upper-message__date
-            2019/05/19
-        .lower-meesage
-          .lower-message__content
-            メッセージ
+           
+      .messages
+        = render @messages
+    -# .messages
+    -#   .message
+    -#     .upper-message
+    -#       .upper-message__user-name
+    -#         メンバー
+    -#       .upper-message__date
+    -#         2019/05/19
+    -#     .lower-meesage
+    -#       .lower-message__content
+    -#         メッセージ
+    -#   .message
+    -#     .upper-message
+    -#       .upper-message__user-name
+    -#         メンバー
+    -#       .upper-message__date
+    -#         2019/05/19
+    -#     .lower-meesage
+    -#       .lower-message__content
+    -#         メッセージ
+    -#   .message
+    -#     .upper-message
+    -#       .upper-message__user-name
+    -#         メンバー
+    -#       .upper-message__date
+    -#         2019/05/19
+    -#     .lower-meesage
+    -#       .lower-message__content
+    -#         メッセージ
     .form
       = form_for [@group, @message] do |f|
         = f.text_field :content, class: 'form__message', placeholder: 'type a message'
