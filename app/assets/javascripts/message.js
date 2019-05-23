@@ -37,10 +37,13 @@ $(document).on('turbolinks:load', function(){
       var html = buildHTML(data);
       $('.messages').append(html);
       $('#message_content').val(''); 
-      $(this).animate({scrollTop: $(this)[0].scrollHeight}, 'fast');
+      $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight}, 'fast');
     })
     .fail(function(data){
       alert('エラーが発生したためメッセージは送信できませんでした。');
     })
+    .always(function(data){
+      $(".form__submit").removeAttr("disabled");
+    });
   });
 });

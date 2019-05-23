@@ -1,6 +1,6 @@
 .notification
   .notice
-    -# グループを作成しました
+    
   = render "shared/side_bar"
   
   .chat
@@ -15,7 +15,7 @@
               = member.name 
       .right-header
         .right-header__button
-        = link_to 'Edit',"/groups/1/edit"
+        = link_to 'Edit',"/groups/#{@group.id}/edit"
            
     .messages
       = render @messages
