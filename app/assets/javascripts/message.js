@@ -1,38 +1,24 @@
 $(function() {
   buildMessageHTML = function(message) {
-   var htmlParent = '<div class="message" data-id=' + message.id + '>' +
-                     '<div class="upper-message">' +
-                       '<div class="upper-message__user-name">' +
-                         message.user_name +
-                       '</div>' +
-                       '<div class="upper-message__date">' +
-                         message.date +
-                       '</div>' +
-                     '</div>' 
-   if (message.content && message.image) {
-   var html = htmlParent + 
-               '<div class="lower-message">' +
-                 '<p class="lower-message__content">' +
-                   message.content +  
-                 '</p>' +
-                 '<img src="' + message.image + '" class="lower-message__image" >' +
-               '</div>' +
-             '</div>'
-   } else if (message.content) {
-     var html = htmlParent + 
-                 '<div class="lower-message">' +
-                   '<p class="lower-message__content">' +
-                     message.content +
-                   '</p>' +
-                 '</div>' +
-               '</div>'
-   } else if (message.image) {
-     var html = htmlParent + 
-                 '<div class="lower-message">' +
-                   '<img src="' + message.image + '" class="lower-message__image" >' +
-                 '</div>' +
-               '</div>'
-   };
+    var content = message.content ? `${ message.content }` : "";
+    var img = message.image ? `<img src= ${ message.image }>` : "";
+    var html = `<div class="message" data-id="${message.id}">
+                  <div class="upper-message">
+                    <div class="upper-message__user-name">
+                      ${message.user_name}
+                    </div>
+                    <div class="upper-message__date">
+                      ${message.date}
+                    </div>
+                  </div>
+                  <div class="lower-meesage">
+                    <p class="lower-message__content">
+                      ${content}
+                    </p>
+                    <img class="lower-message__image">
+                      ${img}
+                  </div>
+                </div>`
    return html;
  };
 
