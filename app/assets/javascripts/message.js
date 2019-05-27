@@ -2,23 +2,22 @@ $(function() {
   buildMessageHTML = function(message) {
     var content = message.content ? `${ message.content }` : "";
     var img = message.image ? `<img src= ${ message.image }>` : "";
-    var htmlParent = `<div class="message" data-id="${message.id}">
-                        <div class="upper-message">
-                          <div class="upper-message__user-name">
-                            ${message.user_name}
-                          </div>
-                          <div class="upper-message__date">
-                            ${message.date}
-                          </div>
-                        </div>
-                      </div>`
-   var html = htmlParent + 
-               `<div class="lower-message">
-                  <p class="lower-message__content">
-                    ${content}
-                  </p>
-                  <img class="lower-message__image">
-                    ${img}
+    var html = `<div class="message" data-id="${message.id}">
+                  <div class="upper-message">
+                    <div class="upper-message__user-name">
+                      ${message.user_name}
+                    </div>
+                    <div class="upper-message__date">
+                      ${message.date}
+                    </div>
+                  </div>
+                  <div class="lower-meesage">
+                    <p class="lower-message__content">
+                      ${content}
+                    </p>
+                    <img class="lower-message__image">
+                      ${img}
+                  </div>
                 </div>`
    return html;
  };
